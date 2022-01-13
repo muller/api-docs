@@ -2538,6 +2538,12 @@ components:
             - confirmed
             - pending
             - rejected
+        project:
+          $ref: "#/components/schemas/Project"
+          example:
+            id: 1
+            name: "Some project"
+            active: true
 
     AttendanceCreateRequest:
       type: object
