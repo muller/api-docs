@@ -25,4 +25,4 @@ jobs:
       - run: npm install -g rdme
 
       - name: Publish API Definitions
-        run: rdme --key "$API_KEY" openapi personio-personnel-data-api-oa3.yaml --id=615426c8fee5dc0080ec2fe8
+        run: rdme openapi personio-personnel-data-api-oa3.yaml --id=615426c8fee5dc0080ec2fe8 --key "$API_KEY"
