@@ -21,5 +21,5 @@ jobs:
           node-version: '14'
       - run: npm install -g rdme
 
-      - name: publish doc
-        run: rdme help
+      - name: Publish API Definitions
+        run: rdme openapi personio-personnel-data-api-oa3.yaml --id=615426c8fee5dc0080ec2fe8
