@@ -13,6 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
@@ -22,4 +25,4 @@ jobs:
       - run: npm install -g rdme
 
       - name: Publish API Definitions
-        run: rdme openapi personio-personnel-data-api-oa3.yaml --id=615426c8fee5dc0080ec2fe8
+        run: rdme --key "$API_KEY" openapi personio-personnel-data-api-oa3.yaml --id=615426c8fee5dc0080ec2fe8
