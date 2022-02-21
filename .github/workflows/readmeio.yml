@@ -24,5 +24,8 @@ jobs:
           node-version: '14'
       - run: npm install -g rdme
 
+      - name: Validate API Definitions
+        run: rdme validate personio-personnel-data-api-oa3.yaml
+
       - name: Publish API Definitions
         run: rdme openapi personio-personnel-data-api-oa3.yaml --id=615426c8fee5dc0080ec2fe8 --key "$API_KEY"
